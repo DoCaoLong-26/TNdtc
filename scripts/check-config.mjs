@@ -1,0 +1,3 @@
+import fs from'node:fs';
+const text=fs.readFileSync('wrangler.jsonc','utf8');
+let errors=[];if(text.includes('00000000-0000-4000-8000-000000000000'))errors.push('Thay database_id bằng ID D1 thật.');if(text.includes('your-team.cloudflareaccess.com')||text.includes('REPLACE_WITH_ACCESS_AUD'))errors.push('Điền ACCESS_TEAM_DOMAIN và ACCESS_POLICY_AUD của Access application thật.');if(!/"routes"\s*:\s*\[/.test(text.replace(/\/\/.*$/gm,'')))errors.push('Thêm routes tên miền được bảo vệ bằng Access.');if(!/"AUTH_MODE"\s*:\s*"access"/.test(text))errors.push('Production phải dùng AUTH_MODE=access.');if(errors.length){console.error(errors.join('\n'));process.exit(1);}console.log('Cấu hình production đã điền các trường bắt buộc.');

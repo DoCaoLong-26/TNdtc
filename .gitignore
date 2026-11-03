@@ -1,0 +1,15 @@
+node_modules/
+.wrangler/
+.build/
+.env
+.env.*
+!.env.example
+.dev.vars
+.dev.vars.*
+*.log
+tests/fixture-*.jpg
+uploads/
+backups/
+*.sqlite
+*.sqlite3
+.DS_Store

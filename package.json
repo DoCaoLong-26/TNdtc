@@ -1,0 +1,25 @@
+{
+  "name": "cham-thi-smart-github",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "wrangler dev --config wrangler.local.jsonc --ip 127.0.0.1",
+    "db:local": "wrangler d1 migrations apply DB --local --config wrangler.local.jsonc",
+    "db:remote": "node scripts/check-config.mjs && wrangler d1 migrations apply DB --remote --config wrangler.jsonc",
+    "check": "node scripts/check-source.mjs",
+    "test": "node scripts/run-tests.mjs",
+    "build": "npm run check && node scripts/build-offline.mjs",
+    "deploy": "node scripts/check-config.mjs && wrangler deploy --config wrangler.jsonc",
+    "build:pages": "node scripts/build-pages.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.92.0",
+    "@napi-rs/canvas": "0.1.100",
+    "xlsx": "0.18.5",
+    "esbuild": "0.27.3"
+  }
+}

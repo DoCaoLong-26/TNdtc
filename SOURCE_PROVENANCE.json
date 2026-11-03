@@ -1,0 +1,26 @@
+{
+  "original_commit": "36d648eb86a6c257ddce105f6611055753cdb168",
+  "edition": "GitHub Pages local grading + Cloudflare Access standalone backend",
+  "unchanged_modules_sha256": {
+    "public/core.mjs": "04636ec9e65ff22aa206343f51b66945b4d6e1186a882c2435804366239ffda7",
+    "public/omr.mjs": "dc4f5a60d9b5459117cf445128fedebe4a12276ff67845a7c411e7bfa41b9994",
+    "public/anchors.mjs": "493cbbc9c8ca96f1c26343e73dd5608f44e4cf9cf80a0ee9ff2dc74afa4f9634",
+    "public/registration.mjs": "201e9abccd7fd1cef009539dc3dec0510c35e221ee999537239b4c9489abbde0",
+    "public/projective.mjs": "b0f4656ea862327f1c4576a2f61b81f0a7620cd61c32d517153bdde6eba8466f",
+    "public/grid-alignment.mjs": "2c393592e90140f0b8c679650b7289ec3887af1f80a799a0f299be57afd9875e",
+    "public/camera.mjs": "12734611d134c9dce4b226c09f409dd2253958f51afa7721ac73a3eeaf897aa5",
+    "public/scan-geometry.mjs": "fff3cf988fcfda4f9075b16595ca24f90f0b5538944147f5efa14c10758b42f5",
+    "public/templates.json": "7817b2aabfeb01514ce2fd7000e7fb91ada211b9188d195b6a63bd69859f21f3",
+    "public/mau-bo.png": "4a62152edc5f85b129d675fdf00b91bb7a2fdf0e073b2b6b85bcb715a1dec7a8",
+    "public/mau-qm.png": "b5d5024bce34a35955d8e7d8b445e55801425824c078ad92bc9fde98f6eb331b"
+  },
+  "changes": [
+    "New Cloudflare Worker hosting/auth adapter",
+    "Google/email Access login replaces ChatGPT/Sites login in standalone edition",
+    "Migration path renamed; tests use local npm dependencies",
+    "GitHub workflows, lockfile and Vietnamese documentation"
+  ],
+  "production_deployment_performed": false,
+  "database_and_student_images_included": false,
+  "pages_generation": "scripts/build-pages.mjs derives static copy from public, adjusts relative asset URLs and disables shared API; original public OMR preserved."
+}

@@ -1,0 +1,2 @@
+import fs from'node:fs';import path from'node:path';import{spawnSync}from'node:child_process';
+function walk(dir){for(let e of fs.readdirSync(dir,{withFileTypes:true})){let p=path.join(dir,e.name);if(e.isDirectory())walk(p);else if(p.endsWith('.mjs')){let r=spawnSync(process.execPath,['--check',p],{stdio:'inherit'});if(r.status)process.exit(r.status);}}}for(let d of['public','pages','server','worker','tests','scripts'])walk(d);console.log('JS syntax checks passed.');

@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cham-thi-smart-local",
+  "main": "worker/index.mjs",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {"directory": "./public", "binding": "ASSETS", "run_worker_first": true, "html_handling": "none"},
+  "d1_databases": [{"binding":"DB","database_name":"cham-thi-db","database_id":"00000000-0000-4000-8000-000000000000","migrations_dir":"migrations"}],
+  "r2_buckets": [{"binding":"BUCKET","bucket_name":"cham-thi-images"}],
+  "vars": {"AUTH_MODE":"local","DEV_EMAIL":"teacher@example.test"}
+}
